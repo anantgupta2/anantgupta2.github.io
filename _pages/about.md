@@ -16,21 +16,22 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-## About Me
+
+### About Me
 
 Hello there! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also completed my B.S. in Computer Science and Mathematics. I’m interested in continual learning, meta-learning, and information retrieval, and more broadly in how we might build systems that learn, adapt, and teach like humans. I’m particularly fascinated by the question of how models could one day learn efficiently from limited data and generalize their knowledge across domains, much like people do.
 Before beginning my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also deeply passionate about teaching and have served as a Teaching Assistant for Automata and Complexity (CS 4510) for four semesters, an experience that continues to shape how I think about learning itself — in both humans and machines.
 
-## Research Interests
+### Research Interests
 
 I’m broadly interested in understanding how humans learn, retain, and reason, and how these processes can inspire the design of more adaptive learning systems. Human learning is inherently interconnected — when we encounter new information, we recall what we already know, build context around it, and refine our understanding through explanation and teaching. We learn continuously, without forgetting past knowledge, and our ability to retrieve, relate, and reinterpret concepts allows us to develop deep, transferable understanding.
 
