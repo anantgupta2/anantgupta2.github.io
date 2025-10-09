@@ -2,7 +2,7 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Anant Gupta
     - name: Date of Birth
       value: 14th March 1879
     - name: Languages
@@ -11,22 +11,19 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science in Computer Science
+      institution: Georgia Institute of Technology, Atlanta, Georgia, USA
+      year: 2027 (expected)
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - 4.0/4.0 GPA
+        - Graduate Teaching Assistant for Automata and Complexity (CS 4510)
+    - title: Bachelor of Science in Computer Science; Bachelor of Science in Mathematics
+      institution: Georgia Institute of Technology, Atlanta, Georgia, USA
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
+        - 4.0/4.0 GPA
+        - Lowell Putnam Exam 2022: Honorable Mention (top 500 out of 4500+)
+        - Teaching Assistant for Automata and Complexity (CS 4510) for three semesters
 
 - title: Experience
   type: time_table
