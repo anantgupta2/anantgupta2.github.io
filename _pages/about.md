@@ -28,19 +28,18 @@ latest_posts:
 
 ### About Me
 
-Hello there! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also completed my B.S. in Computer Science and Mathematics. I’m interested in continual learning, meta-learning, and information retrieval, and more broadly in how we might build systems that learn, adapt, and teach like humans. I’m particularly fascinated by the question of how models could one day learn efficiently from limited data and generalize their knowledge across domains, much like people do.
-Before beginning my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also deeply passionate about teaching and have served as a Teaching Assistant for Automata and Complexity (CS 4510) for four semesters, an experience that continues to shape how I think about learning itself — in both humans and machines.
+Hi! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also earned my B.S. in Computer Science and Mathematics. I’m interested in continual learning, meta-learning, and information retrieval — and more broadly, in how we can build systems that learn, adapt, and teach like humans. I’m fascinated by how models might one day learn efficiently from limited data and generalize across domains, much like people do.
+
+Before starting my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also passionate about teaching and have been a TA for Automata and Complexity (CS 4510) for four semesters — an experience that’s shaped how I think about learning itself, in both humans and machines.
 
 ### Research Interests
 
-I’m broadly interested in understanding how humans learn, retain, and reason, and how these processes can inspire the design of more adaptive learning systems. Human learning is inherently interconnected — when we encounter new information, we recall what we already know, build context around it, and refine our understanding through explanation and teaching. We learn continuously, without forgetting past knowledge, and our ability to retrieve, relate, and reinterpret concepts allows us to develop deep, transferable understanding.
+I’m broadly interested in how humans learn, retain, and reason — and how these principles can inspire more adaptive machine learning systems. We learn continuously, connect ideas across contexts, and refine our understanding through explanation and teaching. My research aims to bring these traits to AI: systems that can recall, relate, and reinterpret knowledge over time, rather than just store it.
 
-My research explores how to bring these abilities to machine learning models. I’m interested in how we can enable systems to teach in ways that reveal and strengthen their own understanding, retain knowledge across time without catastrophic forgetting, and retrieve and contextualize information based on prior experience. Together, these directions aim to move toward models that not only store information but can revisit, refine, and truly learn from it — much like humans do.
+Currently, my work spans three directions:
 
-To that end, my current work explores how these ideas can be realized across three directions:
+- **Information Retrieval** : Humans efficiently recall knowledge and retrieve relevant information from external sources while learning. Can we design models that do the same — retrieving, integrating, and reinterpreting information to enhance their reasoning and understanding?
 
-**Information Retrieval** : Developing a cognitive-inspired model for information retrieval that achieves performance rivaling state-of-the-art neural systems using only PCA and ICA whitening, without any gradient-based training. The model organizes information into incremental concept hierarchies, allowing for interpretable and adaptive retrieval that mirrors how humans categorize and recall knowledge.
+- **Continual Learning** : Humans learn continuously without catastrophic forgetting. Can we train models that similarly retain past knowledge and adapt to new tasks without revisiting old data?
 
-**Continual Learning** : Investigating class-incremental continual learning with diffusion models, where we found that their Fisher Information matrices are inherently low-rank. By exploiting this property, we use elastic weight consolidation to mitigate catastrophic forgetting, allowing models to learn new tasks while preserving prior knowledge.
-
-**LLM Tutor for Deep Theoretical Courses** : Building a Large Language Model–based tutor for teaching advanced theoretical computer science and mathematics. The goal is to create systems that don’t just deliver answers but engage, explain, and refine their understanding through teaching. By employing these models as teachers, we can better uncover weaknesses in their reasoning and move toward AI systems capable of genuine conceptual understanding.
+- **LLMs as Teachers** : Humans often learn best by teaching — explaining concepts refines understanding and exposes gaps in reasoning. Can large language models emulate this process, teaching advanced theory topics in ways that help them learn and reason more effectively themselves?
