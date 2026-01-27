@@ -28,18 +28,16 @@ latest_posts:
 
 ### About Me
 
-Hi! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also earned my B.S. in Computer Science and Mathematics. I’m interested in continual learning, meta-learning, and information retrieval — and more broadly, in how we can build systems that learn, adapt, and teach like humans. I’m fascinated by how models might one day learn efficiently from limited data and generalize across domains, much like people do.
+Hi! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also earned my B.S. in Computer Science and Mathematics. I’m interested in continual learning and meta-learning, and more broadly in building systems that learn, adapt, and teach like humans. I’m especially fascinated by how models can learn efficiently from limited data, generalize across domains, and reason about their own uncertainty and mistakes.
 
-Before starting my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also passionate about teaching and have been a TA for Automata and Complexity (CS 4510) for four semesters — an experience that’s shaped how I think about learning itself, in both humans and machines.
+Before my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also passionate about teaching and have been a TA for Automata and Complexity (CS 4510) for four semesters—an experience that strongly shapes how I think about learning in both humans and machines.
 
-### Research Interests
+### Research Goals
 
-I’m broadly interested in how humans learn, retain, and reason — and how these principles can inspire more adaptive machine learning systems. We learn continuously, connect ideas across contexts, and refine our understanding through explanation and teaching. My research aims to bring these traits to AI: systems that can recall, relate, and reinterpret knowledge over time, rather than just store it.
+I’m particularly interested in models that know what they don’t know—systems capable of identifying uncertainty, detecting flawed reasoning, and revising their beliefs through reflection and interaction.
 
-Currently, my work spans three directions:
+- **Meta-learning**: How models can acquire learning strategies that generalize across tasks, enabling fast adaptation, inductive bias discovery, and reuse of prior knowledge.
 
-- **Information Retrieval** : Humans efficiently recall knowledge and retrieve relevant information from external sources while learning. Can we design models that do the same — retrieving, integrating, and reinterpreting information to enhance their reasoning and understanding?
+- **Continual learning**: Developing methods that allow models to learn over time without catastrophic forgetting, retaining and refining past knowledge while adapting to new tasks.
 
-- **Continual Learning** : Humans learn continuously without catastrophic forgetting. Can we train models that similarly retain past knowledge and adapt to new tasks without revisiting old data?
-
-- **LLMs as Teachers** : Humans often learn best by teaching — explaining concepts refines understanding and exposes gaps in reasoning. Can large language models emulate this process, teaching advanced theory topics in ways that help them learn and reason more effectively themselves?
+- **LLMs as teachers**: Using explanation, tutoring, and self-critique as learning mechanisms, where teaching helps models identify gaps in reasoning and improve long-term understanding.
