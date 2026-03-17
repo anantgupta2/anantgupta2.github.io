@@ -28,10 +28,9 @@ latest_posts:
 
 ### About Me
 
-Hi! I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also earned my B.S. in Computer Science and Mathematics. I’m interested in continual learning and meta-learning, and more broadly in building systems that learn, adapt, and teach like humans. I’m especially fascinated by how models can learn efficiently from limited data, generalize across domains, and reason about their own uncertainty and mistakes.
+Hi, I’m Anant Gupta, a first-year M.S. student in Computer Science at Georgia Tech, where I also completed my B.S. in CS and Mathematics. I’m interested in continual and meta-learning, especially building systems that learn efficiently, generalize across domains, and reason about their own uncertainty.
 
-Before my M.S., I worked on chaotic dynamical systems and large-scale dataset generation. I’m also passionate about teaching and have been a TA for Automata and Complexity (CS 4510) for four semesters—an experience that strongly shapes how I think about learning in both humans and machines.
-
+Previously, I worked on chaotic dynamical systems and large-scale financial dataset curation for LLM training and evaluation. I’ve also been a TA for Automata and Complexity (CS 4510) for four semesters, which strongly influences how I think about learning in both humans and machines.
 ### Research Goals
 
 I’m particularly interested in models that know what they don’t know—systems capable of identifying uncertainty, detecting flawed reasoning, and revising their beliefs through reflection and interaction.
