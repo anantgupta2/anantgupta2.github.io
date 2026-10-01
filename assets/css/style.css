@@ -29,6 +29,14 @@ html[data-theme="light"] {
   --accent: #1f3a68;
   --accent-soft: #eaf0f9;
   --accent-text: #1f3a68;
+  --gold: #9a7d2e;
+  --gold-soft: #f7f1e1;
+  /* Topic hues for research tags; one per tag in the vocabulary. */
+  --hue-cl: #1f5fa8;
+  --hue-ml: #0f766e;
+  --hue-mcl: #6b3fa0;
+  --hue-sa: #a0560a;
+  --hue-he: #b02a5b;
   --shadow: 0 1px 2px rgba(16, 20, 28, 0.05), 0 6px 20px -8px rgba(16, 20, 28, 0.13);
 }
 
@@ -44,6 +52,13 @@ html[data-theme="dark"] {
   --accent: #8fb3e6;
   --accent-soft: #1a2436;
   --accent-text: #a9c6f0;
+  --gold: #d9c27e;
+  --gold-soft: #26210f;
+  --hue-cl: #8fb8ee;
+  --hue-ml: #5fcfc1;
+  --hue-mcl: #c3a5ef;
+  --hue-sa: #efb46a;
+  --hue-he: #f09ab9;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -10px rgba(0, 0, 0, 0.6);
 }
 
@@ -278,6 +293,9 @@ html[data-theme="dark"] .icon-sun {
 .hero {
   padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2rem, 5vw, 3.25rem);
   border-bottom: 1px solid var(--line-soft);
+  background:
+    radial-gradient(52rem 30rem at 92% -8%, var(--accent-soft), transparent 70%),
+    radial-gradient(36rem 22rem at -6% 0%, var(--gold-soft), transparent 70%);
 }
 
 /* The photo floats right and the intro wraps around it. The width cap keeps
@@ -333,6 +351,14 @@ html[data-theme="dark"] .icon-sun {
 .hero__lede strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.hero__lede strong.hue-cl {
+  color: var(--hue-cl);
+}
+
+.hero__lede strong.hue-ml {
+  color: var(--hue-ml);
 }
 
 .hero__links {
@@ -430,6 +456,20 @@ html[data-theme="dark"] .btn--primary:hover {
   margin-bottom: 0.85rem;
 }
 
+.section__title::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+  margin-top: 0.6rem;
+}
+
+.section--tight .section__title::after {
+  display: none;
+}
+
 .section--tight .section__title {
   font-size: 1.1rem;
   font-family: var(--font-sans);
@@ -487,7 +527,8 @@ html[data-theme="dark"] .btn--primary:hover {
 }
 
 .news time {
-  color: var(--text-mute);
+  color: var(--accent-text);
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
   font-size: 0.875rem;
   padding-top: 0.06rem;
@@ -511,6 +552,9 @@ html[data-theme="dark"] .btn--primary:hover {
 }
 
 .card {
+  --c1: var(--accent);
+  position: relative;
+  overflow: hidden;
   background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
@@ -518,8 +562,23 @@ html[data-theme="dark"] .btn--primary:hover {
   transition: border-color var(--step), box-shadow var(--step), transform var(--step);
 }
 
+/* A thin stripe in the card's topic color(s), taken from its tags. */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c1), var(--c2, var(--c1)));
+}
+
+.card:has(.card__tags span:first-child.tag-cl) { --c1: var(--hue-cl); }
+.card:has(.card__tags span:first-child.tag-mcl) { --c1: var(--hue-mcl); }
+.card:has(.card__tags span:first-child.tag-sa) { --c1: var(--hue-sa); }
+.card:has(.card__tags span:first-child.tag-he) { --c1: var(--hue-he); }
+.card:has(.card__tags span:nth-child(2).tag-ml) { --c2: var(--hue-ml); }
+
 .card:hover {
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  border-color: color-mix(in srgb, var(--c1) 45%, var(--line));
   box-shadow: var(--shadow);
   transform: translateY(-2px);
 }
@@ -654,6 +713,58 @@ html[data-theme="dark"] .chip.is-active {
   font-style: italic;
 }
 
+/* Home-page selected publications: the venue column is a tile, navy for
+   published papers and gold for preprints. */
+.pubs--selected .pub {
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  padding: 1.1rem 0;
+}
+
+.pub__tile {
+  --t1: var(--accent);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: start;
+  padding: 0.7rem 1rem 0.7rem 1.15rem;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--t1) 7%, var(--bg-elev));
+  border: 1px solid color-mix(in srgb, var(--t1) 20%, transparent);
+}
+
+.pub__tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--t1);
+}
+
+.tile-pub { --t1: var(--accent-text); }
+.tile-pre { --t1: var(--gold); }
+
+.pub__tile-venue {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--t1);
+}
+
+.pub__tile-venue.is-preprint {
+  font-style: italic;
+  font-size: 1.12rem;
+}
+
+.pub__tile-year {
+  font-size: 0.8rem;
+  color: var(--text-mute);
+  font-variant-numeric: tabular-nums;
+}
+
 .pub__title {
   font-size: 1.0125rem;
   font-weight: 600;
@@ -717,15 +828,22 @@ html[data-theme="dark"] .pub__links a:hover {
 }
 
 .card__tags span {
+  --tag: var(--accent);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  color: var(--tag);
+  background: color-mix(in srgb, var(--tag) 11%, transparent);
   padding: 0.14rem 0.5rem;
   border-radius: var(--r-sm);
 }
+
+.card__tags .tag-cl { --tag: var(--hue-cl); }
+.card__tags .tag-ml { --tag: var(--hue-ml); }
+.card__tags .tag-mcl { --tag: var(--hue-mcl); }
+.card__tags .tag-sa { --tag: var(--hue-sa); }
+.card__tags .tag-he { --tag: var(--hue-he); }
 
 /* Paper links at the foot of a research card — same chips as the pub list. */
 .card__links {
@@ -783,7 +901,8 @@ html[data-theme="dark"] .card__links a:hover {
 
 .timeline__when {
   font-size: 0.85rem;
-  color: var(--text-mute);
+  color: var(--accent-text);
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
   padding-top: 0.15rem;
 }
@@ -1278,6 +1397,23 @@ html[data-theme="dark"] .contact__primary {
 
   .pub__venue {
     padding-top: 0;
+  }
+
+  /* On phones the tile becomes a compact strip above the title. */
+  .pubs--selected .pub {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pub__tile {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.5rem;
+    padding: 0.45rem 0.8rem 0.45rem 0.95rem;
+  }
+
+  .pub__tile-venue {
+    font-size: 1.1rem;
   }
 
   .timeline__when {
