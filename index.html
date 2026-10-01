@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anant Gupta</title>
+    <meta
+      name="description"
+      content="Anant Gupta is an M.S. student in Computer Science at Georgia Tech working on
+        continual learning and meta-learning."
+    />
+    <link rel="canonical" href="https://anantgupta2.github.io/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anant Gupta" />
+    <meta
+      property="og:description"
+      content="M.S. student at Georgia Tech working on continual learning and meta-learning."
+    />
+    <meta property="og:url" content="https://anantgupta2.github.io/" />
+    <meta property="og:image" content="https://anantgupta2.github.io/assets/img/prof_pic.jpg" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <!-- <link rel="alternate" type="application/rss+xml" title="Anant Gupta — Writing"
+      href="feed.xml" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anant Gupta",
+        "url": "https://anantgupta2.github.io/",
+        "email": "agupta886@gatech.edu",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Georgia Institute of Technology"
+        },
+        "sameAs": [
+          "https://scholar.google.com/citations?user=PHSC890AAAAJ",
+          "https://github.com/anantgupta2",
+          "https://www.linkedin.com/in/anantgupta886/"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top">Anant&nbsp;Gupta</a>
+        <nav class="nav__links" aria-label="Main navigation">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <!-- Writing is built but unlinked until there's more to show.
+               To turn it on: uncomment this line (and the matching one in
+               publications.html, plus the RSS <link> in both <head>s). -->
+          <!-- <a href="blog.html">Writing</a> -->
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">Contact</a>
+          <a class="nav__cv" href="assets/pdf/Anant_Gupta_CV.pdf">CV</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <g stroke-linecap="round">
+              <path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.8 1.8M17 17l1.8 1.8M18.8
+                5.2L17 7M7 17l-1.8 1.8" />
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <span id="top"></span>
+
+      <!-- ─────────────────────────  HERO  ───────────────────────── -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero__text">
+            <!-- Floated right so the intro wraps around it. -->
+            <figure class="hero__photo">
+              <img
+                src="assets/img/prof_pic.jpg"
+                alt="Portrait of Anant Gupta"
+                width="828"
+                height="798"
+              />
+            </figure>
+            <h1 class="hero__name">Anant Gupta</h1>
+            <p class="hero__role">
+              M.S. in Computer Science &middot;
+              <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>
+            </p>
+            <div class="hero__lede">
+              <p>
+                I'm a master's student at Georgia Tech, where I am fortunate to be working with
+                <a href="https://chrismaclellan.com/">Christopher MacLellan</a> in the
+                <a href="https://tail.cc.gatech.edu/">Teachable AI Lab</a> and
+                <a href="https://vganesh1.github.io/">Vijay Ganesh</a> in the Reasoning and Learning
+                Group.
+              </p>
+              <p>
+                I study how AI systems can keep learning over time without destroying what they
+                already know, something humans do effortlessly. I work on continual learning and
+                meta-learning, in diffusion models and large language models.
+              </p>
+              <p>
+                <strong>Continual learning.</strong> I work on consolidating knowledge into a model
+                as it keeps learning. External stores work well, but I believe some of what a model
+                learns has to live in the model itself.
+              </p>
+              <p>
+                <strong>Meta-learning.</strong> Today, every decision in training &mdash; what to learn
+                from, what to change, how much &mdash; is made for the model. I work towards models
+                that make these decisions themselves, starting with <em>structured autonomy</em>:
+                the model makes some of them, within a structure we design.
+              </p>
+              <p>
+                The two are closely related. The most natural way to consolidate is through what the
+                model already knows &mdash; self-distillation or RL in LLMs, or composing learned
+                knowledge in diffusion models. Such updates diverge less from the model, so they
+                forget less, and they hand more of the learning to the model itself.
+              </p>
+              <p>
+                I also love to teach, and have been a TA for four semesters. Grading in large
+                courses takes TAs a long time, so I have worked on training models to give students
+                feedback in the meantime.
+              </p>
+            </div>
+
+            <div class="hero__links">
+              <a class="btn btn--primary" href="assets/pdf/Anant_Gupta_CV.pdf">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4.2-4.2M12 15l4.2-4.2M4 17.5v1.8A1.7 1.7 0 0 0 5.7
+                    21h12.6a1.7 1.7 0 0 0 1.7-1.7v-1.8" />
+                </svg>
+                Curriculum Vitae
+              </a>
+              <a class="btn" href="mailto:agupta886@gatech.edu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.8" y="5" width="18.4" height="14" rx="2.2" />
+                  <path d="M3.4 6.6L12 12.8l8.6-6.2" />
+                </svg>
+                Email
+              </a>
+              <a class="btn" href="https://scholar.google.com/citations?user=PHSC890AAAAJ">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3.2L1.8 8.6 12 14l10.2-5.4L12 3.2z" />
+                  <path d="M5.6 10.8v4.4c0 1.9 2.9 3.4 6.4 3.4s6.4-1.5 6.4-3.4v-4.4" />
+                </svg>
+                Scholar
+              </a>
+              <a class="btn" href="https://github.com/anantgupta2">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.2 20.4c-4.4 1.3-4.4-2.3-6.2-2.8m12.4 5.2v-3.5a3 3 0 0 0-.8-2.3c2.7-.3
+                    5.5-1.3 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.3s-1.1-.3-3.5 1.3a12 12 0
+                    0 0-6.2 0C6.6 4.2 5.5 4.5 5.5 4.5a4.3 4.3 0 0 0-.1 3.3A4.7 4.7 0 0 0 4 11c0 4.7
+                    2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3v3.5" />
+                </svg>
+                GitHub
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/anantgupta886/">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2.4" />
+                  <path d="M7.2 10.4V17M7.2 7.3v.02M11.4 17v-3.6a2.1 2.1 0 0 1 4.2 0V17" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────  NEWS  ───────────────────────── -->
+      <section class="section section--tight" aria-labelledby="news-h">
+        <div class="wrap">
+          <h2 class="section__title" id="news-h">News</h2>
+          <ul class="news">
+            <li>
+              <time datetime="2026-09">Sep 2026</time>
+              <span
+                ><em>Trust Region Continual Learning as an Implicit Meta-Learner</em> was accepted
+                to <strong>NeurIPS 2026</strong>.</span
+              >
+            </li>
+            <li>
+              <time datetime="2026-05">May 2026</time>
+              <span><em>CobwebTM</em> was accepted to <strong>Findings of ACL 2026</strong>.</span>
+            </li>
+            <li>
+              <time datetime="2026-01">Jan 2026</time>
+              <span
+                ><em>Avoid Catastrophic Forgetting with Rank-1 Fisher</em> was accepted to
+                <strong>ICLR 2026</strong>.</span
+              >
+            </li>
+            <li>
+              <time datetime="2025-10">Oct 2025</time>
+              <span
+                >Gave an oral presentation on <em>Hierarchical Semantic Retrieval with Cobweb</em>
+                  at
+                <strong>ACS 2025</strong>.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────  RESEARCH  ───────────────────────── -->
+      <section class="section" id="research" aria-labelledby="research-h">
+        <div class="wrap">
+          <h2 class="section__title" id="research-h">Research</h2>
+          <div class="cards">
+            <article class="card">
+              <p class="card__tags"><span>Continual learning</span><span>Meta-learning</span></p>
+              <h4>Continual Learning in Diffusion Models</h4>
+              <p class="card__meta">with Christopher MacLellan</p>
+              <p>
+                We show that the empirical Fisher of a diffusion model is rank-1 in low-SNR regimes.
+                Using this, we define a rank-1 EWC penalty and show that, combined with replay, the
+                model forgets less. We then show that this formulation is equivalent to one-step
+                MAML under local approximations, and observe the effect directly: the model
+                re-learns previous tasks faster than other methods.
+              </p>
+              <p class="card__why">Constraining how much you update is already a form of learning to
+                learn.</p>
+              <p class="card__links"><a href="https://openreview.net/forum?id=zCZcbRsc4g">ICLR
+                2026</a><a href="https://arxiv.org/abs/2602.02417">NeurIPS 2026</a></p>
+            </article>
+            <article class="card">
+              <p class="card__tags"><span>Meta-continual learning</span></p>
+              <h4>Self-Consolidating Language Models</h4>
+              <p class="card__meta">with Christopher MacLellan</p>
+              <p>
+                The same intuition as the diffusion work, but at LLM scale the Fisher is too
+                  expensive to compute, so SCoL lets the model learn it: meta-RL decides which of
+                  its own layers to change when it absorbs a passage. Trained only on short
+                  contexts, it beats in-context baselines that see the whole passage on LongBench
+                  v2.
+              </p>
+              <p class="card__why">Consolidation with autonomy: the model decides where new knowledge
+                goes.</p>
+              <p class="card__links"><a href="https://arxiv.org/abs/2605.07076">Preprint</a></p>
+            </article>
+            <article class="card">
+              <p class="card__tags"><span>Continual learning</span></p>
+              <h4>Hierarchical and Incremental Concept Formation</h4>
+              <p class="card__meta">with Christopher MacLellan</p>
+              <p>
+                Cobweb builds a concept hierarchy incrementally, one example at a time. As a
+                  retrieval index it matches dense encoders and stays robust where kNN collapses;
+                  CobwebTM extends it to lifelong hierarchical topic modeling and matches or beats prior
+                  incremental methods.
+              </p>
+              <p class="card__why">The external-memory side: a retrieval structure that is itself
+                continual.</p>
+              <p class="card__links"><a href="https://arxiv.org/abs/2510.02539">ACS 2025</a><a
+                href="https://aclanthology.org/2026.findings-acl.1753/">ACL Findings 2026</a></p>
+            </article>
+            <article class="card">
+              <p class="card__tags"><span>Structured autonomy</span></p>
+              <h4>Multi-Role Reinforcement Learning</h4>
+              <p class="card__meta">with Christopher MacLellan and Wei Xu &middot; ongoing</p>
+              <p>
+                One language model is trained in several study roles over the same examples &mdash;
+                  comparing problems, identifying subgoals, explaining. Roles that never produce an
+                  answer still improve answer accuracy.
+              </p>
+              <p class="card__why">Roles hand more of the training to the model itself; next, the model
+                designs its own roles.</p>
+              <p class="card__links"><span>Preprint</span></p>
+            </article>
+            <article class="card">
+              <p class="card__tags"><span>Structured autonomy</span></p>
+              <h4>Test-Time Compositional Generation</h4>
+              <p class="card__meta">with Christopher MacLellan</p>
+              <p>
+                From a single out-of-distribution query, recover concept prototypes by score-based
+                  mode finding across the noise levels of a pretrained diffusion model, then compose
+                  them into a product-of-experts teacher.
+              </p>
+              <p class="card__why">Once the algorithm is set, the only open question is what to
+                incorporate.</p>
+              <p class="card__links"><a href="https://arxiv.org/abs/2605.07078">Preprint</a></p>
+            </article>
+            <article class="card">
+              <p class="card__tags"><span>Human errors</span></p>
+              <h4>Simulating Student Misconceptions</h4>
+              <p class="card__meta">with Vijay Ganesh &middot; ongoing</p>
+              <p>
+                Given a specific misconception, can a model produce the wrong answer a real student
+                holding it would produce, in a single turn? A counterfactual generation problem.
+              </p>
+              <p class="card__why">Human-like errors can benchmark and train models; here, for grading
+                theoretical computer science, where partial credit is hard.</p>
+            </article>
+            <!-- Hidden for now; will come back. Uncomment the card to restore it.
+            <article class="card">
+              <p class="card__tags"><span>Human errors</span></p>
+              <h4>LLMs as Debuggers in Unverifiable Domains</h4>
+              <p class="card__meta">with Vijay Ganesh &middot; ongoing</p>
+              <p>
+                Errors in physics papers, with real open peer-review responses as ground truth. A
+                challenger that produces errors and a grader that catches them are trained against
+                each other through self-play.
+              </p>
+              <p class="card__why">Human-like errors become training signal where no verifier
+                exists.</p>
+            </article>
+            -->
+          </div>
+      </div>
+      </section>
+
+      <!-- ─────────────────────────  SELECTED PUBLICATIONS  ───────────────────────── -->
+      <section class="section" id="publications" aria-labelledby="pubs-h">
+        <div class="wrap">
+          <h2 class="section__title" id="pubs-h">Selected publications</h2>
+          <p class="section__lede">
+            <span class="star">*</span> denotes equal contribution.
+          </p>
+
+          <ol class="pubs">
+            <li class="pub">
+              <div class="pub__venue"><span class="badge badge--hl">NeurIPS 2026</span></div>
+              <div class="pub__body">
+                <h3 class="pub__title">
+                  Trust Region Continual Learning as an Implicit Meta-Learner
+                </h3>
+                <p class="pub__authors">
+                  Zekun Wang<span class="star">*</span>, <b>Anant Gupta</b><span
+                    class="star">*</span>, Christopher J. MacLellan
+                </p>
+                <p class="pub__meta">
+                  Conference on Neural Information Processing Systems &middot; Main Track &middot;
+                  Poster &middot; Atlanta, Dec 2026
+                </p>
+                <p class="pub__links"><a href="https://arxiv.org/abs/2602.02417">arXiv</a></p>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub__venue"><span class="badge badge--hl">ICLR 2026</span></div>
+              <div class="pub__body">
+                <h3 class="pub__title">
+                  Avoid Catastrophic Forgetting with Rank-1 Fisher from Diffusion Models
+                </h3>
+                <p class="pub__authors">
+                  Zekun Wang<span class="star">*</span>, <b>Anant Gupta</b><span
+                    class="star">*</span>, Zihan Dong, Christopher J. MacLellan
+                </p>
+                <p class="pub__meta">
+                  International Conference on Learning Representations &middot; Main Track &middot;
+                  Poster &middot; Rio de Janeiro, Apr 2026
+                </p>
+                <p class="pub__links">
+                  <a href="https://openreview.net/forum?id=zCZcbRsc4g">OpenReview</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub__venue"><span class="badge badge--muted">Preprint</span></div>
+              <div class="pub__body">
+                <h3 class="pub__title">Cross-Task Transfer via Multi-Role Reinforcement
+                  Learning</h3>
+                <p class="pub__authors">
+                  <b>Anant Gupta</b>, Zekun Wang, Wei Xu, Christopher J. MacLellan
+                </p>
+                <p class="pub__meta">2026</p>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub__venue"><span class="badge badge--muted">Preprint</span></div>
+              <div class="pub__body">
+                <h3 class="pub__title">
+                  Self-Consolidating Language Models: Continual Knowledge Incorporation from Context
+                </h3>
+                <p class="pub__authors">
+                  Zekun Wang<span class="star">*</span>, <b>Anant Gupta</b><span
+                    class="star">*</span>, Zihan Dong, Christopher J. MacLellan
+                </p>
+                <p class="pub__meta">arXiv:2605.07076, 2026</p>
+                <p class="pub__links"><a href="https://arxiv.org/abs/2605.07076">arXiv</a></p>
+              </div>
+            </li>
+          </ol>
+
+          <p class="more">
+            <a class="more__link" href="publications.html"
+              >All publications
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M12.5 5.5L19 12l-6.5 6.5" />
+              </svg>
+            </a>
+            <span class="muted">&middot; also on
+              <a href="https://scholar.google.com/citations?user=PHSC890AAAAJ">Google Scholar</a
+              ></span
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────  TEACHING  ───────────────────────── -->
+      <section class="section" id="teaching" aria-labelledby="teaching-h">
+        <div class="wrap">
+          <h2 class="section__title" id="teaching-h">Teaching</h2>
+          <p class="section__lede">
+            Four semesters of TAing Automata and Complexity shaped how I think about learning in
+            both humans and machines &mdash; and led directly to my work on LLMs for education.
+          </p>
+
+          <ul class="timeline">
+            <li>
+              <div class="timeline__when">Jan 2024 &ndash; Dec 2025</div>
+              <div class="timeline__what">
+                <h3>Teaching Assistant &mdash; CS 4510: Automata and Complexity</h3>
+                <p class="timeline__where">
+                  Georgia Institute of Technology &middot; <b>Head TA, Spring 2025</b>
+                </p>
+                <p>
+                  Delivered two lectures to 300+ students, led 12 review sessions, and wrote
+                  homework and exam problems.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__when">Jan 2023 &ndash; Aug 2023</div>
+              <div class="timeline__what">
+                <h3>College of Computing Tutor</h3>
+                <p class="timeline__where">Georgia Institute of Technology</p>
+                <p>
+                  Tutored 150+ hours across AI, algorithms, data structures, and discrete
+                  mathematics.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────  SERVICE + EDUCATION  ───────────────────────── -->
+      <section class="section" aria-labelledby="service-h">
+        <div class="wrap two-col">
+          <div>
+            <h2 class="section__title" id="service-h">Service</h2>
+            <ul class="plain">
+              <li>
+                <b>Reviewer</b>, International Conference on Learning Representations (ICLR 2027)
+              </li>
+              <li>
+                <b>Reviewer</b>, NeurIPS 2026 Workshop on Towards Test-Time Continual Learning
+                Agents (TTCL)
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="section__title">Education</h2>
+            <ul class="plain">
+              <li>
+                <b>M.S. Computer Science</b>, Georgia Tech &mdash; expected May 2027<br />
+                <span class="muted">GPA 4.0/4.0</span>
+              </li>
+              <li>
+                <b>B.S. Computer Science &amp; B.S. Mathematics</b>, Georgia Tech &mdash; May
+                  2025<br />
+                <span class="muted"
+                  >GPA 4.0/4.0 &middot; Putnam 2022 Honorable Mention (top 500 of 4500+)</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────  CONTACT  ───────────────────────── -->
+      <section class="section section--contact" id="contact" aria-labelledby="contact-h">
+        <div class="wrap">
+          <h2 class="section__title" id="contact-h">Get in touch</h2>
+          <p class="section__lede">
+            I'm always happy to talk about continual learning, meta-learning, or LLMs for
+            education &mdash; and I'm glad to hear from students thinking about research. The
+            fastest way to reach me is email.
+          </p>
+
+          <div class="contact">
+            <a class="contact__primary" href="mailto:agupta886@gatech.edu">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2.8" y="5" width="18.4" height="14" rx="2.2" />
+                <path d="M3.4 6.6L12 12.8l8.6-6.2" />
+              </svg>
+              agupta886@gatech.edu
+            </a>
+
+            <ul class="contact__list">
+              <li>
+                <span class="contact__label">Happy to chat about</span>
+                Research collaborations, my papers, or PhD applications
+              </li>
+              <li>
+                <span class="contact__label">Find me</span>
+                <a href="https://scholar.google.com/citations?user=PHSC890AAAAJ">Google Scholar</a>
+                &middot; <a href="https://github.com/anantgupta2">GitHub</a> &middot;
+                <a href="https://www.linkedin.com/in/anantgupta886/">LinkedIn</a>
+              </li>
+              <li>
+                <span class="contact__label">Based in</span>
+                Atlanta, GA &mdash; Georgia Institute of Technology
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>
+          <b>Anant Gupta</b><br />
+          <a href="mailto:agupta886@gatech.edu">agupta886@gatech.edu</a><br />
+          <span class="muted">Georgia Institute of Technology, Atlanta, GA</span>
+        </p>
+        <p class="footer__meta muted">
+          Built with plain HTML &amp; CSS. Source on
+          <a href="https://github.com/anantgupta2/anantgupta2.github.io">GitHub</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
