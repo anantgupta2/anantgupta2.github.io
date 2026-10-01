@@ -134,12 +134,12 @@
                 meta-learning, in diffusion models and large language models.
               </p>
               <p>
-                <strong>Continual learning.</strong> I work on consolidating knowledge into a model
+                <strong class="hue-cl">Continual learning.</strong> I work on consolidating knowledge into a model
                 as it keeps learning. External stores work well, but I believe some of what a model
                 learns has to live in the model itself.
               </p>
               <p>
-                <strong>Meta-learning.</strong> Today, every decision in training &mdash; what to learn
+                <strong class="hue-ml">Meta-learning.</strong> Today, every decision in training &mdash; what to learn
                 from, what to change, how much &mdash; is made for the model. I work towards models
                 that make these decisions themselves, starting with <em>structured autonomy</em>:
                 the model makes some of them, within a structure we design.
@@ -241,7 +241,7 @@
           <h2 class="section__title" id="research-h">Research</h2>
           <div class="cards">
             <article class="card">
-              <p class="card__tags"><span>Continual learning</span><span>Meta-learning</span></p>
+              <p class="card__tags"><span class="tag-cl">Continual learning</span><span class="tag-ml">Meta-learning</span></p>
               <h4>Continual Learning in Diffusion Models</h4>
               <p class="card__meta">with Christopher MacLellan</p>
               <p>
@@ -257,7 +257,7 @@
                 2026</a><a href="https://arxiv.org/abs/2602.02417">NeurIPS 2026</a></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span>Meta-continual learning</span></p>
+              <p class="card__tags"><span class="tag-mcl">Meta-continual learning</span></p>
               <h4>Self-Consolidating Language Models</h4>
               <p class="card__meta">with Christopher MacLellan</p>
               <p>
@@ -272,7 +272,7 @@
               <p class="card__links"><a href="https://arxiv.org/abs/2605.07076">Preprint</a></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span>Continual learning</span></p>
+              <p class="card__tags"><span class="tag-cl">Continual learning</span></p>
               <h4>Hierarchical and Incremental Concept Formation</h4>
               <p class="card__meta">with Christopher MacLellan</p>
               <p>
@@ -287,7 +287,7 @@
                 href="https://aclanthology.org/2026.findings-acl.1753/">ACL Findings 2026</a></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span>Structured autonomy</span></p>
+              <p class="card__tags"><span class="tag-sa">Structured autonomy</span></p>
               <h4>Multi-Role Reinforcement Learning</h4>
               <p class="card__meta">with Christopher MacLellan and Wei Xu &middot; ongoing</p>
               <p>
@@ -300,7 +300,7 @@
               <p class="card__links"><span>Preprint</span></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span>Structured autonomy</span></p>
+              <p class="card__tags"><span class="tag-sa">Structured autonomy</span></p>
               <h4>Test-Time Compositional Generation</h4>
               <p class="card__meta">with Christopher MacLellan</p>
               <p>
@@ -313,7 +313,7 @@
               <p class="card__links"><a href="https://arxiv.org/abs/2605.07078">Preprint</a></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span>Human errors</span></p>
+              <p class="card__tags"><span class="tag-he">Human errors</span></p>
               <h4>Simulating Student Misconceptions</h4>
               <p class="card__meta">with Vijay Ganesh &middot; ongoing</p>
               <p>
@@ -325,7 +325,7 @@
             </article>
             <!-- Hidden for now; will come back. Uncomment the card to restore it.
             <article class="card">
-              <p class="card__tags"><span>Human errors</span></p>
+              <p class="card__tags"><span class="tag-he">Human errors</span></p>
               <h4>LLMs as Debuggers in Unverifiable Domains</h4>
               <p class="card__meta">with Vijay Ganesh &middot; ongoing</p>
               <p>
@@ -349,9 +349,12 @@
             <span class="star">*</span> denotes equal contribution.
           </p>
 
-          <ol class="pubs">
+          <ol class="pubs pubs--selected">
             <li class="pub">
-              <div class="pub__venue"><span class="badge badge--hl">NeurIPS 2026</span></div>
+              <div class="pub__venue pub__tile tile-pub">
+                <span class="pub__tile-venue">NeurIPS</span>
+                <span class="pub__tile-year">2026</span>
+              </div>
               <div class="pub__body">
                 <h3 class="pub__title">
                   Trust Region Continual Learning as an Implicit Meta-Learner
@@ -369,7 +372,10 @@
             </li>
 
             <li class="pub">
-              <div class="pub__venue"><span class="badge badge--hl">ICLR 2026</span></div>
+              <div class="pub__venue pub__tile tile-pub">
+                <span class="pub__tile-venue">ICLR</span>
+                <span class="pub__tile-year">2026</span>
+              </div>
               <div class="pub__body">
                 <h3 class="pub__title">
                   Avoid Catastrophic Forgetting with Rank-1 Fisher from Diffusion Models
@@ -389,7 +395,10 @@
             </li>
 
             <li class="pub">
-              <div class="pub__venue"><span class="badge badge--muted">Preprint</span></div>
+              <div class="pub__venue pub__tile tile-pre">
+                <span class="pub__tile-venue is-preprint">Preprint</span>
+                <span class="pub__tile-year">2026</span>
+              </div>
               <div class="pub__body">
                 <h3 class="pub__title">Cross-Task Transfer via Multi-Role Reinforcement
                   Learning</h3>
@@ -401,7 +410,10 @@
             </li>
 
             <li class="pub">
-              <div class="pub__venue"><span class="badge badge--muted">Preprint</span></div>
+              <div class="pub__venue pub__tile tile-pre">
+                <span class="pub__tile-venue is-preprint">Preprint</span>
+                <span class="pub__tile-year">2026</span>
+              </div>
               <div class="pub__body">
                 <h3 class="pub__title">
                   Self-Consolidating Language Models: Continual Knowledge Incorporation from Context

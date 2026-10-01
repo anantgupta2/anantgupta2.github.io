@@ -33,6 +33,15 @@ underneath; the owner asked for this (2026-10-01). The intro is capped at 56rem 
 under the photo stay readable. On phones (≤640px) the photo sits small above
 the name instead.
 
+Each research tag has its own color (`--hue-*` tokens, `.tag-*` classes:
+cl, ml, mcl, sa, he). The card's top stripe takes the color of its tags, and
+the bold "Continual learning." and "Meta-learning." labels in the intro use the
+matching hues. A new tag needs a class and a hue in both themes. On the home
+page, Selected publications show each venue as a tile (`.pub__tile`, `.tile-*`)
+navy for published papers and gold for preprints (the owner found topic
+colors there too much); `publications.html` keeps plain badges. Section titles
+get a short Georgia Tech gold bar (`--gold`).
+
 The accent color `#1F3A68` matches the owner's LaTeX CV. Fonts are Newsreader
 (serif, for headings) and Inter (sans, for body text).
 
