@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import re
 import shutil
@@ -289,6 +290,16 @@ def build() -> None:
 """,
         encoding="utf-8",
     )
+
+    # 5. Cache-busting: tag the CSS and JS links with a hash of their contents,
+    # so browsers fetch the new file after every change instead of a stale copy.
+    for asset in ("assets/css/style.css", "assets/js/main.js"):
+        digest = hashlib.sha1((OUT / asset).read_bytes()).hexdigest()[:10]
+        for page in OUT.rglob("*.html"):
+            text = page.read_text(encoding="utf-8")
+            tagged = text.replace(f'{asset}"', f'{asset}?v={digest}"')
+            if tagged != text:
+                page.write_text(tagged, encoding="utf-8")
 
     print(f"Built {len(posts)} post(s) into {OUT}/")
     for p in posts:
