@@ -7,11 +7,11 @@ summary: What I study, the two angles I take, and where each project fits.
 ## The question
 
 I study human-inspired and human-like learning in machine learning models.
-Humans and models overlap in some ways and differ in others. Sometimes they
+Humans and AI systems overlap in some ways and differ in others. Sometimes they
 share a property but express it differently. My working belief is that many
 intuitions about how people learn can be formalized in models. I hope to
 find which intuitions transfer, understand why others don't, and turn the ones
-that do into learning methods. Many won't transfer, and shouldn't be
+that do into learning methods for these systems. Many won't transfer, and shouldn't be
 expected to, so I try to be careful about which ones to build on.
 
 I come at this from two sides:
