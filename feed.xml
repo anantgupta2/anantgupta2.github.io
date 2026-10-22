@@ -3,15 +3,22 @@
   <channel>
     <title>Anant Gupta — Writing</title>
     <link>https://anantgupta2.github.io/blog.html</link>
-    <description>Notes on continual learning, meta-learning, and self-improving systems.</description>
+    <description>Longer pieces on my research in continual learning and meta-learning.</description>
     <language>en</language>
     <atom:link href="https://anantgupta2.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A fixed dataset has more signal than one pass extracts</title>
-      <link>https://anantgupta2.github.io/blog/more-signal-than-you-think.html</link>
-      <guid isPermaLink="true">https://anantgupta2.github.io/blog/more-signal-than-you-think.html</guid>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Why I keep coming back to the same idea from three different directions — and what a &quot;role&quot; is doing that a second epoch isn&#x27;t.</description>
+      <title>How my work fits together</title>
+      <link>https://anantgupta2.github.io/blog/how-my-work-fits-together.html</link>
+      <guid isPermaLink="true">https://anantgupta2.github.io/blog/how-my-work-fits-together.html</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What I study, the two angles I take, and where each project fits.</description>
+    </item>
+    <item>
+      <title>Where I think continual learning and meta-learning should go</title>
+      <link>https://anantgupta2.github.io/blog/continual-and-meta-learning.html</link>
+      <guid isPermaLink="true">https://anantgupta2.github.io/blog/continual-and-meta-learning.html</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description>My views on what comes next in the two areas most of my work sits in.</description>
     </item>
   </channel>
 </rss>

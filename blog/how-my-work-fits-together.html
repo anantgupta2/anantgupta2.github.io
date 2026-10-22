@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How my work fits together — Anant Gupta</title>
+    <meta name="description" content="What I study, the two angles I take, and where each project fits." />
+    <link rel="canonical" href="https://anantgupta2.github.io/blog/how-my-work-fits-together.html" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How my work fits together" />
+    <meta property="og:description" content="What I study, the two angles I take, and where each project fits." />
+    <meta property="og:url" content="https://anantgupta2.github.io/blog/how-my-work-fits-together.html" />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Anant Gupta — Writing"
+      href="../feed.xml"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css?v=186812c5ff" />
+
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How my work fits together",
+        "datePublished": "2026-10-15",
+        "author": { "@type": "Person", "name": "Anant Gupta" },
+        "url": "https://anantgupta2.github.io/blog/how-my-work-fits-together.html"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="../index.html">Anant&nbsp;Gupta</a>
+        <nav class="nav__links" aria-label="Main navigation">
+          <a href="../index.html#research">Research</a>
+          <a href="../publications.html">Publications</a>
+          <a href="../blog.html" class="is-current">Writing</a>
+          <a href="../index.html#teaching">Teaching</a>
+          <a href="../index.html#contact">Contact</a>
+          <a class="nav__cv" href="../assets/pdf/Anant_Gupta_CV.pdf">CV</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <g stroke-linecap="round">
+              <path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.8 1.8M17 17l1.8 1.8M18.8 5.2L17 7M7 17l-1.8 1.8" />
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="section post">
+        <div class="wrap wrap--narrow">
+          <a class="backlink" href="../blog.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 12H6M11.5 5.5L5 12l6.5 6.5" />
+            </svg>
+            All writing
+          </a>
+
+          <h1 class="post__title">How my work fits together</h1>
+          <p class="post__date"><time datetime="2026-10-15">October 15, 2026</time></p>
+
+          <div class="prose">
+<h2>The question</h2>
+<p>I study human-inspired and human-like learning in machine learning models.
+Humans and models overlap in some ways and differ in others. Sometimes they
+share a property but express it differently. My working belief is that many
+intuitions about how people learn can be formalized in models. I hope to
+find which intuitions transfer, understand why others don&rsquo;t, and turn the ones
+that do into learning methods. Many won&rsquo;t transfer, and shouldn&rsquo;t be
+expected to, so I try to be careful about which ones to build on.</p>
+<p>I come at this from two sides:</p>
+<ol>
+<li><strong>A model&rsquo;s own properties.</strong> Some properties come from a model&rsquo;s inductive
+   biases, and they can be put to use directly.</li>
+<li><strong>Properties inspired by humans.</strong> Some of the ways people learn can be
+   formalized and built into models.</li>
+</ol>
+<p>Most of this work is in continual learning (when and how a model should take in
+new information without forgetting) and meta-learning (how a model can get more
+out of the data it has).</p>
+<h2>A model&rsquo;s own properties</h2>
+<p><strong>Continual learning in diffusion models.</strong> The empirical Fisher of a diffusion
+model is rank-1 in low-SNR regimes. That makes a rank-1 EWC penalty possible,
+and combined with replay it more than halves forgetting on ImageNet-1k relative
+to replay and diagonal-EWC baselines.
+(<a href="https://openreview.net/forum?id=zCZcbRsc4g">ICLR 2026</a>)</p>
+<p><strong>Continual learning as meta-learning.</strong> The Fisher penalty keeps each update
+inside a trust region, so we call the method trust region continual learning.
+Under local approximations, it is equivalent to one-step MAML, with replay as
+the query and the Fisher penalty as the support. In that sense it implicitly
+meta-learns previous tasks, and the effect shows up directly: the model
+re-learns earlier tasks faster than with other methods.
+(<a href="https://arxiv.org/abs/2602.02417">NeurIPS 2026</a>)</p>
+<h2>Properties inspired by humans</h2>
+<p><strong>Multi-role reinforcement learning.</strong> Humans get far more out of very little
+data than LLMs do. Part of that is inductive bias; part is how people process
+the data. They learn the same material in more than one way, by comparing
+problems, identifying subgoals, or explaining, and they abstract across
+examples. Multi-role RL trains one language model in several such roles over the
+same examples. Roles that never answer a question directly still improve problem
+solving. This points to transfer across tasks within LLMs, and to more training
+signal in a fixed dataset than standard RL with verifiable rewards extracts.
+Learning to abstract improves generalization, looking across several examples at
+once gives more signal than seeing one at a time, and learning the same material
+from different views helps even when those views are learned separately.
+(<em>Cross-Task Transfer via Multi-Role Reinforcement Learning</em>, preprint.)</p>
+<p><strong>Test-time compositional generalization via prototype discovery.</strong>
+Compositional generalization is producing new configurations from familiar
+parts. Humans do this freely, combining concepts they already know into things
+they have never seen. We find a way to express this in diffusion models, so that
+a pretrained model can compose what it already knows at test time.
+(<a href="https://arxiv.org/abs/2605.07078">Preprint</a>)</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>
+          <b>Anant Gupta</b><br />
+          <a href="mailto:agupta886@gatech.edu">agupta886@gatech.edu</a><br />
+          <span class="muted">Georgia Institute of Technology, Atlanta, GA</span>
+        </p>
+        <p class="footer__meta muted">
+          <a href="../feed.xml">RSS</a> &middot; Source on
+          <a href="https://github.com/anantgupta2/anantgupta2.github.io">GitHub</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js?v=359dd4e942"></script>
+  </body>
+</html>

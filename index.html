@@ -22,8 +22,8 @@
     <meta name="twitter:card" content="summary" />
 
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <!-- <link rel="alternate" type="application/rss+xml" title="Anant Gupta — Writing"
-      href="feed.xml" /> -->
+    <link rel="alternate" type="application/rss+xml" title="Anant Gupta — Writing"
+      href="feed.xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css?v=2c0ae88b9b" />
+    <link rel="stylesheet" href="assets/css/style.css?v=186812c5ff" />
 
     <script>
       (function () {
@@ -70,10 +70,7 @@
         <nav class="nav__links" aria-label="Main navigation">
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <!-- Writing is built but unlinked until there's more to show.
-               To turn it on: uncomment this line (and the matching one in
-               publications.html, plus the RSS <link> in both <head>s). -->
-          <!-- <a href="blog.html">Writing</a> -->
+          <a href="blog.html">Writing</a>
           <a href="#teaching">Teaching</a>
           <a href="#contact">Contact</a>
           <a class="nav__cv" href="assets/pdf/Anant_Gupta_CV.pdf">CV</a>
@@ -129,31 +126,30 @@
                 Group.
               </p>
               <p>
-                I study how AI systems can keep learning over time without destroying what they
-                already know, something humans do effortlessly. I work on continual learning and
-                meta-learning, in diffusion models and large language models.
+                Humans and models overlap in some ways and differ in others. Sometimes they share a property but
+                express it differently. My working belief is that many intuitions about how people
+                learn can be formalized in models. I hope to find which intuitions
+                transfer, understand why others don't, and turn the ones that do into learning
+                methods.
               </p>
               <p>
-                <strong class="hue-cl">Continual learning.</strong> I work on consolidating knowledge into a model
-                as it keeps learning. External stores work well, but I believe some of what a model
-                learns has to live in the model itself.
-              </p>
-              <p>
-                <strong class="hue-ml">Meta-learning.</strong> Today, every decision in training &mdash; what to learn
-                from, what to change, how much &mdash; is made for the model. I work towards models
-                that make these decisions themselves, starting with <em>structured autonomy</em>:
-                the model makes some of them, within a structure we design.
-              </p>
-              <p>
-                The two are closely related. The most natural way to consolidate is through what the
-                model already knows &mdash; self-distillation or RL in LLMs, or composing learned
-                knowledge in diffusion models. Such updates diverge less from the model, so they
-                forget less, and they hand more of the learning to the model itself.
+                Most of my work is in continual learning and meta-learning. In continual learning, I ask when and how a model should
+                take in new information without forgetting. In meta-learning, I ask how a model can
+                get more out of the same data, the way people do. In the long run, I want models
+                that learn efficiently on their own.
               </p>
               <p>
                 I also love to teach, and have been a TA for four semesters. Grading in large
                 courses takes TAs a long time, so I have worked on training models to give students
                 feedback in the meantime.
+              </p>
+              <p class="hero__more">
+                <a class="more__link" href="blog/how-my-work-fits-together.html"
+                  >Read the longer version
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h13M12.5 5.5L19 12l-6.5 6.5" />
+                  </svg>
+                </a>
               </p>
             </div>
 
@@ -287,29 +283,28 @@
                 href="https://aclanthology.org/2026.findings-acl.1753/">ACL Findings 2026</a></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span class="tag-sa">Structured autonomy</span></p>
+              <p class="card__tags"><span class="tag-hi">Human-inspired</span></p>
               <h4>Multi-Role Reinforcement Learning</h4>
-              <p class="card__meta">with Christopher MacLellan and Wei Xu &middot; ongoing</p>
+              <p class="card__meta">with Christopher MacLellan &middot; ongoing</p>
               <p>
                 One language model is trained in several study roles over the same examples &mdash;
                   comparing problems, identifying subgoals, explaining. Roles that never produce an
                   answer still improve answer accuracy.
               </p>
-              <p class="card__why">Roles hand more of the training to the model itself; next, the model
-                designs its own roles.</p>
+              <p class="card__why">People study the same material in several ways; so can a model.</p>
               <p class="card__links"><span>Preprint</span></p>
             </article>
             <article class="card">
-              <p class="card__tags"><span class="tag-sa">Structured autonomy</span></p>
-              <h4>Test-Time Compositional Generation</h4>
+              <p class="card__tags"><span class="tag-hi">Human-inspired</span></p>
+              <h4>Test-Time Compositional Generalization</h4>
               <p class="card__meta">with Christopher MacLellan</p>
               <p>
                 From a single out-of-distribution query, recover concept prototypes by score-based
                   mode finding across the noise levels of a pretrained diffusion model, then compose
                   them into a product-of-experts teacher.
               </p>
-              <p class="card__why">Once the algorithm is set, the only open question is what to
-                incorporate.</p>
+              <p class="card__why">People compose familiar concepts freely; here a diffusion model
+                does too.</p>
               <p class="card__links"><a href="https://arxiv.org/abs/2605.07078">Preprint</a></p>
             </article>
             <article class="card">
