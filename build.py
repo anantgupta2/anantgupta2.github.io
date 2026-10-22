@@ -61,6 +61,9 @@ MATH_GUARD = re.compile(
 
 MATH_TOKEN = "zZmathZz{}zZmathZz"
 
+# Links to the blog index and feed in post.html are wrapped in these markers.
+BLOG_LINKS = re.compile(r"<!--blog-->(.*?)<!--/blog-->", re.S)
+
 
 def protect_math(text: str) -> tuple[str, list[str]]:
     spans: list[str] = []
@@ -139,6 +142,9 @@ def parse_post(path: Path) -> dict:
         "summary": " ".join(summary.split()),
         "body": body_html,
         "needs_math": bool(math_spans),
+        # `blog_links: hide` drops every link to the blog index and feed, for a
+        # page that is linked from the home page while the blog stays hidden.
+        "hide_blog_links": meta.get("blog_links", "").lower() == "hide",
         "source": path.name,
     }
 
@@ -218,7 +224,8 @@ def build() -> None:
 
     posts = sorted(
         (parse_post(p) for p in POSTS.glob("*.md")),
-        key=lambda p: p["date"],
+        # Same-day posts fall back to filename order, so the order is stable.
+        key=lambda p: (p["date"], p["source"]),
         reverse=True,
     )
 
@@ -242,6 +249,7 @@ def build() -> None:
             slug=p["slug"],
             math=KATEX if p["needs_math"] else "",
         )
+        page = BLOG_LINKS.sub("" if p["hide_blog_links"] else r"\1", page)
         (OUT / "blog" / f"{p['slug']}.html").write_text(page, encoding="utf-8")
 
     # 3. Blog index
@@ -281,7 +289,7 @@ def build() -> None:
   <channel>
     <title>{AUTHOR} — Writing</title>
     <link>{SITE_URL}/blog.html</link>
-    <description>Notes on continual learning, meta-learning, and self-improving systems.</description>
+    <description>Longer pieces on my research in continual learning and meta-learning.</description>
     <language>en</language>
     <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
 {entries}

@@ -34,9 +34,9 @@ under the photo stay readable. On phones (≤640px) the photo sits small above
 the name instead.
 
 Each research tag has its own color (`--hue-*` tokens, `.tag-*` classes:
-cl, ml, mcl, sa, he). The card's top stripe takes the color of its tags, and
-the bold "Continual learning." and "Meta-learning." labels in the intro use the
-matching hues. A new tag needs a class and a hue in both themes. On the home
+cl, ml, mcl, hi, he). The card's top stripe takes the color of its tags. The
+intro no longer has bold colored labels (removed 2026-10-22); the `.hue-*`
+classes are unused for now. A new tag needs a class and a hue in both themes. On the home
 page, Selected publications show each venue as a tile (`.pub__tile`, `.tile-*`)
 navy for published papers and gold for preprints (the owner found topic
 colors there too much); `publications.html` keeps plain badges. Section titles
@@ -95,6 +95,35 @@ If a CSS change doesn't show up, the browser has cached the old stylesheet. Hard
 
 ### The owner's framing (their words, lightly structured)
 
+- **Overall (2026-10-22): human-inspired and human-like learning in ML
+  models.** Humans and models overlap, differ, or share a property but express
+  it differently. Working belief: intuitions about how people learn can be
+  formalized in models; find which transfer, why others don't, and turn the
+  ones that do into methods. Many shouldn't be expected to transfer.
+- **Two lenses:** (1) properties from a model's own inductive biases (diffusion
+  rank-1 Fisher, TRCL, SCoL); (2) properties **inspired by humans** (the
+  owner's wording, 2026-10-22; not "shared with") (multi-role RL: decomposing tasks and abstracting across examples;
+  test-time composition, which the owner calls "borrowed", based on humans).
+  The long-form page leaves out Cobweb and student misconceptions (owner's
+  call, 2026-10-22) and calls the composition work "test-time compositional
+  generalization via prototype discovery". The paper is "Test-Time Compositional Generalization in Diffusion Models via Prototype Discovery" (owner, 2026-10-22; arXiv v1 and the CV still say "Concept Discovery").
+- **Continual learning = when and how to update.** Their view: constrain the
+  update (e.g. Fisher) when knowledge is new to the model; when the model can
+  reach it with RL, on-policy distillation should be enough. This is a view, not
+  a result. A subagent check (2026-10-22) found it only partly supported:
+  Wu et al. (arXiv 2610.05872) say a Fisher mask is optional and helps most when
+  the data is far; their headline is that off-policy merging beats on-policy
+  self-distillation. Shenfeld et al. (arXiv 2601.19897) show on-policy
+  self-distillation works when the behavior is reachable in context. So never
+  write "required" or "on-policy is better"; the views page has the approved
+  wording.
+- **Meta-learning = "learning to learn ___"** (efficiently, continually, from
+  unstructured data…). Each setting fills one blank, which is why so many claim
+  "self-improvement". The owner believes it should include all of them, and
+  works towards that through structured autonomy.
+- **Structured autonomy is the goal, not a label.** Don't use it as a heading
+  or label in the intro or on cards. The card tag that said "Structured
+  autonomy" is now "Human-inspired" (`.tag-hi`, owner's call, 2026-10-22).
 - They work on **continual learning** and **meta-learning**.
 - **Continual learning, i.e. consolidation.** Whatever external memory a model
   has, part of what it learns should become part of the model itself. They are
@@ -124,16 +153,20 @@ If a CSS change doesn't show up, the browser has cached the old stylesheet. Hard
   grader/tutor, and that starts with models that can reproduce the mistakes
   students actually make.
 
-The home-page intro, in order:
+The home-page intro (approved 2026-10-22) reads like a normal website intro:
+**no paper citations, venues or technical detail** (the owner said so). The
+specifics live on the cards and on the long-form page (see Hidden things). In
+order:
 1. The advisors.
-2. "Broadly interested in continual learning and meta-learning."
-3. **Continual learning.**: consolidation.
-4. **Meta-learning.**: working towards structured autonomy.
-5. A plain paragraph linking the two. The most natural way to consolidate is
-   through what the model already knows (self-distillation or RL in LLMs,
-   composing learned knowledge in diffusion models). Such updates diverge less,
-   forget less, and hand more of the learning to the model.
-6. A plain teaching paragraph: they love to teach and have been a TA for four
+2. Overlap and differences between humans and models, and which
+   intuitions transfer. No opening "I study human-inspired…" line: the owner
+   cut it (2026-10-22). Never say "human-like" in the intro.
+3. Most work is continual learning and meta-learning (the owner cut the "two
+   sides" sentence from the intro; the lenses stay on the long-form page).
+   Continual learning asks when and how to take in new information without forgetting;
+   meta-learning asks how to get more out of the same data; long run, models
+   that learn efficiently on their own.
+4. A plain teaching paragraph: they love to teach and have been a TA for four
    semesters. Grading takes TAs a long time, so they work on training models to
    give feedback in the meantime. The paragraph ends there; the owner removed
    an extra clause about reproducing student mistakes. It motivates the "Human
@@ -146,8 +179,8 @@ Use "I believe" at most once; the owner found repeated "I believe"s too much.
 The research section is one grid of cards, not grouped under thread headings,
 because most projects span several themes. Each card carries topic tags
 (`.card__tags`) at the top. The tag vocabulary is: Continual learning,
-Meta-learning, Meta-continual learning, Structured autonomy, Human errors. Structured autonomy is the
-owner's name for the "learning from within" side of meta-learning.
+Meta-learning, Meta-continual learning, Human-inspired, Human errors.
+Human-inspired replaced Structured autonomy (2026-10-22).
 
 1. **Continual Learning in Diffusion Models.** Tags: Continual learning,
    Meta-learning. Titled this way, not "Trust Region Continual Learning",
@@ -174,12 +207,15 @@ owner's name for the "learning from within" side of meta-learning.
    Continual learning. This is the external-memory / retrieval side. "Matches or
    beats prior incremental methods" comes from the CobwebTM paper: the owner
    asked for "beats", but the paper says "outperforms or performs competitively".
-4. **Multi-Role Reinforcement Learning.** Tag: Structured autonomy. Roles hand
-   more of the training to the model; next, the model designs its own roles. The
-   paper is "Cross-Task Transfer via Multi-Role Reinforcement Learning". It has
+4. **Multi-Role Reinforcement Learning.** Tag: Human-inspired. Note: "People
+   study the same material in several ways; so can a model." (2026-10-22). The card is "with" MacLellan only, and it
+   no longer mentions meta-roles (the model designing its own roles); the owner
+   removed both from the CV (2026-10-22). The paper's author list still includes
+   Wei Xu. The paper is "Cross-Task Transfer via Multi-Role Reinforcement Learning". It has
    no public link yet, so the Preprint chip is unlinked.
-5. **Test-Time Compositional Generation.** Tag: Structured autonomy. Once the
-   algorithm is set, the only question is what to incorporate.
+5. **Test-Time Compositional Generalization.** (renamed from "Generation", 2026-10-22) Tag: Human-inspired. Note:
+   "People compose familiar concepts freely; here a diffusion model does too."
+   (2026-10-22).
 6. **Simulating Student Misconceptions** (with Vijay Ganesh). Tag: Human errors.
    The idea: if models can reproduce the errors people make, those errors can
    benchmark and train models. The task is **single-turn**, and the card says so.
@@ -191,12 +227,31 @@ owner's name for the "learning from within" side of meta-learning.
 Each card ends with `.card__links` chips pointing to the papers. Keep card titles
 matching the paper names used on `publications.html`.
 
+## Writing
+
+The Writing page (`blog.html`) is live and in the menu (turned on
+2026-10-22). The owner wants it to tie their work together. It lists every
+post in `posts/`, newest first; same-day posts sort by filename, descending.
+- **Long-form research page**: `posts/2026-10-15-how-my-work-fits-together.md`.
+  It is the "extended view" of all their work and isn't on the main page. It is
+  organized by the two lenses and may cite papers. It leaves out the hidden
+  Debuggers project, SCoL, Cobweb and student misconceptions (the owner cut
+  SCoL and the page's intro line and closing link themselves). The home page links to
+  it with a small "Read the longer version" link at the end of the intro
+  (`.hero__more`).
+- **Views page**: `posts/2026-10-15-continual-and-meta-learning.md`. It covers
+  where the owner thinks continual learning and meta-learning should go, in
+  plain, human language. Structured autonomy may be named here. Only the
+  Writing page links to it.
+- **"A fixed dataset has more signal than one pass extracts"** (2026-09-28): the
+  owner took it off the list (2026-10-22). It sits in `_drafts/`, which is not
+  built. Move it back to `posts/` to publish it.
+- `blog_links: hide` in a post's frontmatter still drops the links to the
+  Writing page and feed (the `<!--blog-->` markers in `_templates/post.html`).
+  No post uses it now.
+
 ## Hidden things (built, not linked)
 
-- **Writing / blog**: `blog.html` and `feed.xml` are built and deployed but not
-  linked. To turn it on, uncomment the `Writing` nav link and the RSS
-  `<link rel="alternate">` in both `index.html` and `publications.html`. Each spot
-  is marked. The owner will turn it on when they start writing.
 - **Debuggers card**: see above.
 
 ## Deployment status
@@ -211,13 +266,8 @@ matching the paper names used on `publications.html`.
 
 ## Open questions for the owner
 
-- **The intro is not final.** As of 2026-09-28 the owner said they will work
-  out the intro themselves later; everything else on the page is approved. Two
-  ideas they were shown but haven't decided on:
-  - Frame consolidation as "where new knowledge should go: in the weights or in
-    an external memory". That also gives Cobweb a place in the intro.
-  - Use teaching as the lens: treat the model as a student that studies, keeps
-    what matters, and makes revealing errors.
+- The Multi-Role RL OpenReview link (forum id G2opIiGYPk): OK to link? Not
+  linked yet.
 
 - Contact lists "PhD applications" as a topic. Should it instead say whether
   they are applying (e.g. for Fall 2027), or be dropped?
