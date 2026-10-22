@@ -35,7 +35,7 @@ html[data-theme="light"] {
   --hue-cl: #1f5fa8;
   --hue-ml: #0f766e;
   --hue-mcl: #6b3fa0;
-  --hue-hi: #a0560a;
+  --hue-tc: #a0560a;
   --hue-he: #b02a5b;
   --shadow: 0 1px 2px rgba(16, 20, 28, 0.05), 0 6px 20px -8px rgba(16, 20, 28, 0.13);
 }
@@ -57,7 +57,7 @@ html[data-theme="dark"] {
   --hue-cl: #8fb8ee;
   --hue-ml: #5fcfc1;
   --hue-mcl: #c3a5ef;
-  --hue-hi: #efb46a;
+  --hue-tc: #efb46a;
   --hue-he: #f09ab9;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -10px rgba(0, 0, 0, 0.6);
 }
@@ -578,7 +578,7 @@ html[data-theme="dark"] .btn--primary:hover {
 
 .card:has(.card__tags span:first-child.tag-cl) { --c1: var(--hue-cl); }
 .card:has(.card__tags span:first-child.tag-mcl) { --c1: var(--hue-mcl); }
-.card:has(.card__tags span:first-child.tag-hi) { --c1: var(--hue-hi); }
+.card:has(.card__tags span:first-child.tag-tc) { --c1: var(--hue-tc); }
 .card:has(.card__tags span:first-child.tag-he) { --c1: var(--hue-he); }
 .card:has(.card__tags span:nth-child(2).tag-ml) { --c2: var(--hue-ml); }
 
@@ -847,7 +847,7 @@ html[data-theme="dark"] .pub__links a:hover {
 .card__tags .tag-cl { --tag: var(--hue-cl); }
 .card__tags .tag-ml { --tag: var(--hue-ml); }
 .card__tags .tag-mcl { --tag: var(--hue-mcl); }
-.card__tags .tag-hi { --tag: var(--hue-hi); }
+.card__tags .tag-tc { --tag: var(--hue-tc); }
 .card__tags .tag-he { --tag: var(--hue-he); }
 
 /* Paper links at the foot of a research card — same chips as the pub list. */

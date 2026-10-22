@@ -22,8 +22,8 @@ I come at this from two sides:
    formalized and built into models.
 
 Most of this work is in continual learning (when and how a model should take in
-new information without forgetting) and meta-learning (how a model can get more
-out of the data it has).
+new information without forgetting) and meta-learning (how a model can learn to
+learn: efficiently, continually, and from unstructured data).
 
 ## A model's own properties
 

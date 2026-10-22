@@ -34,7 +34,7 @@ under the photo stay readable. On phones (≤640px) the photo sits small above
 the name instead.
 
 Each research tag has its own color (`--hue-*` tokens, `.tag-*` classes:
-cl, ml, mcl, hi, he). The card's top stripe takes the color of its tags. The
+cl, ml, mcl, tc, he). The card's top stripe takes the color of its tags. The
 intro no longer has bold colored labels (removed 2026-10-22); the `.hue-*`
 classes are unused for now. A new tag needs a class and a hue in both themes. On the home
 page, Selected publications show each venue as a tile (`.pub__tile`, `.tile-*`)
@@ -123,7 +123,8 @@ If a CSS change doesn't show up, the browser has cached the old stylesheet. Hard
   works towards that through structured autonomy.
 - **Structured autonomy is the goal, not a label.** Don't use it as a heading
   or label in the intro or on cards. The card tag that said "Structured
-  autonomy" is now "Human-inspired" (`.tag-hi`, owner's call, 2026-10-22).
+  autonomy" became "Human-inspired", then "Transfer/composition" (`.tag-tc`,
+  owner's call, 2026-10-22): one shared tag on the Multi-Role RL and composition cards.
 - They work on **continual learning** and **meta-learning**.
 - **Continual learning, i.e. consolidation.** Whatever external memory a model
   has, part of what it learns should become part of the model itself. They are
@@ -179,8 +180,8 @@ Use "I believe" at most once; the owner found repeated "I believe"s too much.
 The research section is one grid of cards, not grouped under thread headings,
 because most projects span several themes. Each card carries topic tags
 (`.card__tags`) at the top. The tag vocabulary is: Continual learning,
-Meta-learning, Meta-continual learning, Human-inspired, Human errors.
-Human-inspired replaced Structured autonomy (2026-10-22).
+Meta-learning, Meta-continual learning, Transfer/composition, Human errors.
+Transfer/composition replaced Structured autonomy (2026-10-22).
 
 1. **Continual Learning in Diffusion Models.** Tags: Continual learning,
    Meta-learning. Titled this way, not "Trust Region Continual Learning",
@@ -207,13 +208,13 @@ Human-inspired replaced Structured autonomy (2026-10-22).
    Continual learning. This is the external-memory / retrieval side. "Matches or
    beats prior incremental methods" comes from the CobwebTM paper: the owner
    asked for "beats", but the paper says "outperforms or performs competitively".
-4. **Multi-Role Reinforcement Learning.** Tag: Human-inspired. Note: "People
+4. **Multi-Role Reinforcement Learning.** Tag: Transfer/composition. Note: "People
    study the same material in several ways; so can a model." (2026-10-22). The card is "with" MacLellan only, and it
    no longer mentions meta-roles (the model designing its own roles); the owner
    removed both from the CV (2026-10-22). The paper's author list still includes
    Wei Xu. The paper is "Cross-Task Transfer via Multi-Role Reinforcement Learning". It has
    no public link yet, so the Preprint chip is unlinked.
-5. **Test-Time Compositional Generalization.** (renamed from "Generation", 2026-10-22) Tag: Human-inspired. Note:
+5. **Test-Time Compositional Generalization.** (renamed from "Generation", 2026-10-22) Tag: Transfer/composition. Note:
    "People compose familiar concepts freely; here a diffusion model does too."
    (2026-10-22).
 6. **Simulating Student Misconceptions** (with Vijay Ganesh). Tag: Human errors.
